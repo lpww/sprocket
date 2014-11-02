@@ -1,0 +1,18 @@
+#header{
+	color: white;
+	font-family: helvetica;
+	background-color: #0A8F08
+}
+
+#quote{
+	margin-top: 0.8em;
+	font-size: 1.75em;
+	font-style: bold;
+}
+
+#author{
+	/*font-size: 75%;*/
+	font-style: italic;
+	margin-bottom: 0.8em;
+}
+
