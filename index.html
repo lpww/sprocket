@@ -7,31 +7,45 @@
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/normalize.css"> 
     <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/font-style.css" />
     <script src="js/vendor/modernizr.js"></script>
   </head>
   <body>
     <div id="header">
-      <div id="navigate" class="row">
-        <div class="small-3 column">Sprocket</div>
+        <div id="navigate" class="row">
+        <div class="small-3 column"><img src="img/yahoo.gif" /></div>
         <div class="small-3 column">Share</div>
         <div class="small-3 column">Store</div>
         <div class="small-3 column">Donate</div>
       </div>
       <div id="quote" class="row">
-        <div class="small-12 small-centered column">"an amazing quote of epic proportions"</div>
+        <div class="small-12 column text-center epicQuote"></div>
       </div>
       <div id="author" class="row">
         <div class="small-8 column"></div>
-        <div class="small-4 column">-Anon</div>
+        <div class="small-4 column epicAuthor"></div>
       </div>
-      <div id="interaction" class="row">
-        <div class="small-8 column">share</div>
-        <div class="small-2 column">andoird</div>
-        <div class="small-2 column">apple</div>
+      <div id="interaction" class="row contain-to-grid sticky">
+        <nav class="top-bar" data-topbar role="navigation" >
+          <section class="top-bar-section">
+            <div class="small-8 column"> share me</div>
+            <div class="small-2 column">
+              <a href="https://play.google.com/store/apps/details?id=com.retrographic.sprocket">
+                <img src="img/android.png" />
+              </a>
+            </div>
+            <div class="small-2 column">
+              <a href="http://itunes.com/apps/sprocket">
+                <img src="img/apple.png" />
+              </a>
+            </div>
+          </section>
+        </nav>
       </div>
     </div>
 
     <div id="mainfeed">
+      <div class="small-6 small-centered columns"><img src="http://photos-d.ak.instagram.com/hphotos-ak-xfa1/10683857_783648088343547_228568176_n.jpg" />The new Brookes saddle</div>
       <div class="small-6 small-centered columns"><img src="http://photos-f.ak.instagram.com/hphotos-ak-xfa1/10724630_298958396962717_1338009790_n.jpg" />Campy Gran Sport Derailleur</div>
       <div class="small-6 small-centered columns"><img src="http://photos-d.ak.instagram.com/hphotos-ak-xpa1/1941026_721355431283019_337570342_n.jpg" />Campy Aero Wheel</div>
       <div class="small-6 small-centered columns"><img src="http://photos-d.ak.instagram.com/hphotos-ak-xfa1/10683857_783648088343547_228568176_n.jpg" />The new Brookes saddle</div>
@@ -40,6 +54,7 @@
     
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
+    <script src="js/app.js"></script>
     <script>
       $(document).foundation();
     </script>
