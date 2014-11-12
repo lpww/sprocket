@@ -26,3 +26,16 @@
 	font-family: iconFont;
 	background-color: #0A8F08
 }
+
+.navbarimg{
+	width: 50%;
+	height: 50%;
+	color: white;
+}
+
+.logo{
+	width: 120%;
+	height: 70%;
+	margin-top: 0%;
+	margin-bottom: 0%;
+}
