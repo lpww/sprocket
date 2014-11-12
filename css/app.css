@@ -1,41 +1,49 @@
-#header{
+#header {
 	color: white;
 	font-family: iconFont;
 	background-color: #0A8F08
 }
 
-#quote{
+#quote {
 	margin-top: 0.8em;
 	font-size: 1.75em;
 	font-style: bold;
 }
 
-#author{
+#author {
 	/*font-size: 75%;*/
 	font-style: italic;
 	margin-bottom: 0.8em;
 }
 
-#mainfeed{
+#mainfeed {
 	margin: 2%;
 	font-family: iconFont;
 }
 
-.top-bar{
+.top-bar {
 	color: white;
 	font-family: iconFont;
 	background-color: #0A8F08
 }
 
-.navbarimg{
+.navbarimg {
 	width: 50%;
 	height: 50%;
 	color: white;
 }
 
-.logo{
+.logo {
 	width: 120%;
 	height: 70%;
 	margin-top: 0%;
 	margin-bottom: 0%;
+}
+
+object {
+	pointer-events: none;
+}
+
+a.svg { 
+	display: block;
 }
