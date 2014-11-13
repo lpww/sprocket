@@ -44,6 +44,12 @@ object {
 	pointer-events: none;
 }
 
-a.svg { 
+.svg { 
 	display: block;
+}
+
+object {
+	fill:#dd6127;  
+    stroke:#dd6127;
+	
 }
