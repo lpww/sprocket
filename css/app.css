@@ -6,38 +6,40 @@
 
 #quote {
 	margin-top: 0.8em;
-	font-size: 1.75em;
+	font-size: 2em;
 	font-style: bold;
 }
 
 #author {
 	/*font-size: 75%;*/
 	font-style: italic;
-	margin-bottom: 0.8em;
+	margin-bottom: 1em;
 }
 
 #mainfeed {
-	margin: 2%;
+	margin: 0%;
 	font-family: iconFont;
+	text-align: center;
 }
 
 .top-bar {
 	color: white;
 	font-family: iconFont;
-	background-color: #0A8F08
+	background-color: #0A8F08;
+	height: auto;
+	padding-top: .5em;
+	padding-bottom: .5em;
 }
 
 .navbarimg {
-	width: 50%;
-	height: 50%;
-	color: white;
+	width: 3.5em;
+	height: 3.5em;
 }
 
 .logo {
-	width: 120%;
-	height: 70%;
-	margin-top: 0%;
-	margin-bottom: 0%;
+	width: 15em;
+	height: 8em;
+	text-align: left;
 }
 
 object {
@@ -48,8 +50,16 @@ object {
 	display: block;
 }
 
-object {
-	fill:#dd6127;  
-    stroke:#dd6127;
+.right {
+	text-align: right;
+	display: block;
+}
+
+.photo {
+	width: 100%;
+	height: 100%;
+}
+
+.header {
 	
 }
