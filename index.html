@@ -28,7 +28,7 @@
       <div id="interaction" class="header sticky">
         <nav class="top-bar" data-topbar role="navigation" >
           <section class="top-bar-section">
-            <div class="small-1 column"><a href="http://google.com/"><object type="image/svg+xml" data="img/SVGic_share_AND.svg" class="navbarimg svg"></object></a></div>
+            <div class="small-1 column"><a href="http://google.com/"><object type="image/svg+xml" id="shareIcon" data="img/SVGic_share_AND.svg" class="navbarimg svg"></object></a></div>
             <div class="small-7 column invisible">Pedal on!</div>
             <a href="http://appstore.com/sprocket">
             <div class="small-2 column">
@@ -40,17 +40,14 @@
       </div>
     </div>
 
-    <div id="mainfeed">
-      <div class="small-6 small-centered columns photo"><img src="http://photos-d.ak.instagram.com/hphotos-ak-xfa1/10683857_783648088343547_228568176_n.jpg" /><br>The new Brookes saddle</div>
-      <div class="small-6 small-centered columns photo"><img src="http://photos-f.ak.instagram.com/hphotos-ak-xfa1/10724630_298958396962717_1338009790_n.jpg" /><br>Campy Gran Sport Derailleur</div>
-      <div class="small-6 small-centered columns photo"><img src="http://photos-d.ak.instagram.com/hphotos-ak-xpa1/1941026_721355431283019_337570342_n.jpg" /><br>Campy Aero Wheel</div>
-      <div class="small-6 small-centered columns photo"><img src="http://photos-d.ak.instagram.com/hphotos-ak-xfa1/10683857_783648088343547_228568176_n.jpg" /><br>The new Brookes saddle</div>
-    </div>
+    <div id="feed"></div>
     
     
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script src="js/app.js"></script>
+    <script src="js/rss.js"></script>
     <script>
       $(document).foundation();
     </script>
