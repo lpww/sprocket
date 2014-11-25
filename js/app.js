@@ -12,7 +12,7 @@ var quotes = [
 	["Get a bicycle. You will certainly not regret it, if you live.", "Mark Twain"],
 	["Cycle tracks will abound in Utopia.", "H.G. Wells"],
 	["It never gets easier, you just go faster", "Greg leMond"],
-	["When my legs hurt, I say: \"Shut up legs! Do what I tell you to do!\"", "Jens Voigt"],
+	["When my legs hurt, I say: 'Shut up legs! Do what I tell you to do!'", "Jens Voigt"],
 	["If it hurts me, it must hurt the other ones twice as much.", "Jens Voigt"],
 	["Crashing is part of cycling as crying is part of love.", "Johan Museeuw"],
 	["Melancholy is incompatible with bicycling.", "James E. Starrs"],
