@@ -1,0 +1,9 @@
+@font-face {
+	font-family: Colaborate-Bold;
+	src: url('fonts/Colaborate/ttf/Colaborate-Regular.ttf');
+}
+
+p {
+	font-family: Colaborate-Bold, Sans-serif;
+	font-size: 20px;
+}

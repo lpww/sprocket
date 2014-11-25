@@ -1,17 +1,10 @@
 body {
 	background-color: #DBDAD8;
-	/*font-family: 'Collaborate', Fallback, serif;*/
+	font-family: Helvetica, Arial, sans-serif;
 }
 
-/*@font-face {
-  font-family: 'Collaborate';
-  src: url('font/Collaborate/woff') format('woff'),  
-       url('font/Collaborate/ttf') format('truetype'); 
-}
-*/
 #header {
 	color: white;
-	font-family: iconFont;
 	background-color: #0A8F08;
 	padding-top: .5em;
 }
@@ -22,14 +15,13 @@ body {
 }
 
 #author {
-	/*font-size: 75%;*/
+	font-size: 1em;
 	font-style: italic;
-	margin-bottom: 1em;
+	margin-bottom: 4em;
 }
 
 #feed {
 	margin: 0%;
-	font-family: iconFont;
 	text-align: center;
 }
 
@@ -43,7 +35,7 @@ body {
 
 .top-bar {
 	color: white;
-	font-family: iconFont;
+	/*font-family: iconFont;*/
 	background-color: #0A8F08;
 	height: auto;
 	padding-top: .5em;

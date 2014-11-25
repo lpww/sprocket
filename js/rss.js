@@ -1,8 +1,10 @@
 google.load("feeds", "1");
 
+var loaded = false;
+
 function initialize() {
   var feed = new google.feeds.Feed("http://widget.websta.me/rss/n/sprocketblog");
-  feed.setNumEntries(4);
+  feed.setNumEntries(21);
   feed.load(function(result) {
     if (!result.error) {
       var container = document.getElementById("feed");
@@ -24,22 +26,58 @@ function initialize() {
         cardDiv.id = "card";
       }
     }
-  });
-}
+  })
+ loaded = true;
+};
+
 google.setOnLoadCallback(initialize);
 
-//code below loads images, likes, comments, description into seperate divs.
-        //var image = entry.content.slice(324, 475);
-        //var imageDiv = document.createElement("imageDiv");
-        //var descriptionDiv = document.createElement("descriptionDiv");
-        //var miscDiv = document.createElement("miscDiv");
-        //image = image.slice(0, image.indexOf(">") + 1).replace("_a.", "_n.");
-        // imageDiv.innerHTML = image;
-        //descriptionDiv.appendChild(document.createTextNode(entry.title));
-        //var likes = entry.content.slice(entry.content.indexOf("<span"), entry.content.indexOf("</span"));
-        //var comments = entry.content.slice(entry.content.indexOf('COMMENTS:">'));//, entry.content.indexOf("<p>"));
-        //console.log(comments);
-        //miscDiv.innerHTML = likes + " LIKES " + comments + " COMMENTS";
-        //cardDiv.appendChild(imageDiv);
-        //cardDiv.appendChild(descriptionDiv);
-        //cardDiv.appendChild(miscDiv);
+disableScroll();
+    setInterval(function(){ if(loaded === true){enableScroll(); clearInterval(); }}, 100);
+
+$(document).ready(function(){
+    var keys = [37, 38, 39, 40];
+
+    function preventDefault(e) {
+      e = e || window.event;
+      if (e.preventDefault)
+          e.preventDefault();
+      e.returnValue = false;  
+    }
+
+    function keydown(e) {
+      for (var i = keys.length; i--;) {
+        if (e.keyCode === keys[i]) {
+            preventDefault(e);
+            return;
+            }
+        }
+    }
+
+    function wheel(e) {
+      preventDefault(e);
+    }
+
+    function disableScroll() {
+      if (window.addEventListener) {
+          window.addEventListener('DOMMouseScroll', wheel, false);
+      }
+      window.onmousewheel = document.onmousewheel = wheel;
+    }
+
+    function enableScroll() {
+        if (window.removeEventListener) {
+            window.removeEventListener('DOMMouseScroll', wheel, false);
+        }
+        window.onmousewheel = document.onmousewheel = null;  
+    }
+});
+
+
+
+
+
+
+
+
+
