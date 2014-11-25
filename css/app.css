@@ -35,7 +35,6 @@ body {
 
 .top-bar {
 	color: white;
-	/*font-family: iconFont;*/
 	background-color: #0A8F08;
 	height: auto;
 	padding-top: .5em;
@@ -55,7 +54,7 @@ body {
 
 object {
 	pointer-events: none;
-}s
+}
 
 .svg { 
 	display: block;
@@ -71,7 +70,7 @@ object {
 	height: 100%;
 }
 
-#shareIcon {
+.shareIcon {
 	width: 3em;
 	height: 3em;
 	padding-top: .5em
