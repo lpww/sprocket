@@ -1,7 +1,14 @@
 body {
 	background-color: #DBDAD8;
+	/*font-family: 'Collaborate', Fallback, serif;*/
 }
 
+/*@font-face {
+  font-family: 'Collaborate';
+  src: url('font/Collaborate/woff') format('woff'),  
+       url('font/Collaborate/ttf') format('truetype'); 
+}
+*/
 #header {
 	color: white;
 	font-family: iconFont;
