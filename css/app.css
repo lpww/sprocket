@@ -1,12 +1,17 @@
 body {
 	background-color: #DBDAD8;
 	font-family: Helvetica, Arial, sans-serif;
+	/*background: transparent url("img/SVGbrand_spocket_logotypewsymbol.svg") fixed no-repeat 30px 30px;*/
 }
 
 #header {
 	color: white;
 	background-color: #0A8F08;
 	padding-top: .5em;
+/*	background: orange url("img/SVGic_share_AND.svg") fixed no-repeat 30px 30px;
+	overflow: hidden;
+	padding: 30px 0 30px 30px;
+	height: 138px;*/
 }
 
 #quote {
@@ -30,6 +35,8 @@ body {
 
 .card {
 	background-color: white;
+	margin-top: 1em;
+	box-shadow: 0.1em 0.1em 0.8em #888888;
 }
 
 p strong {
@@ -52,42 +59,29 @@ p {
 }
 
 .commentsAndLikes {
-	text-align: center;
-	position: center;
-	max-width: 100px;
+	background-color: white;
 }
 
 .iconBorder {
-	margin: 0 auto;
 	border: solid;
 	border-width: .1em;
-	max-width: 50px;
 	border-radius: 5px;
 	color: silver;
-	float: auto;
-	text-align: center;
+	position: relative;
+	display: inline-block;
+	margin-left: 3px;
+	margin-right: 3px;
+	margin-bottom: 1.3em;
 }
 
-.iconBorderLeft {
-	margin: 0 auto;
-	border: solid;
-	border-width: .1em;
-	max-width: 50px;
-	border-radius: 5px;
-	color: silver;
-	float: left;
-	text-align: center;
+.iconBorder img{
+	margin: 0.2em;
+	margin-right: 0;
 }
 
-.iconBorderRight {
-	margin: 0 auto;
-	border: solid;
-	border-width: .1em;
-	max-width: 50px;
-	border-radius: 5px;
-	color: silver;
-	float: right;	
-	text-align: center;
+.iconBorder span{
+	margin: 0.2em;
+	margin-left: 0;
 }
 
 .top-bar {

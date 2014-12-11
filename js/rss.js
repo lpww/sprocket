@@ -27,16 +27,16 @@ function initialize() {
         textDiv.innerHTML = rssData[1] + "<br><br>" + arr;
         var x = rssData[2].replace("http://websta.me/img/comments.png", "img/SVGic_comments.svg").replace("http://websta.me/img/likes.png", "img/SVGic_likes.svg").replace("red", "").replace('alt="COMMENTS:">', 'alt="COMMENTS:"> ');
         var commentsBorder = document.createElement("div");
-        commentsBorder.className = "iconBorderLeft";
+        commentsBorder.className = "iconBorder";
         commentsBorder.innerHTML = x.slice(x.indexOf("<img"), x.indexOf("</span>"));
         var likesBorder = document.createElement("div");
-        likesBorder.className = "iconBorderRight";
-        likesBorder.innerHTML = x.slice(x.indexOf('<img src="img/SVGic_comments.svg"'));
-        commentsAndLikesDiv.appendChild(commentsBorder);
-        commentsAndLikesDiv.appendChild(likesBorder);
+        likesBorder.className = "iconBorder";
+        likesBorder.innerHTML = "<span>" + x.slice(x.indexOf('<img src="img/SVGic_comments.svg"')) + "</span>";
         cardDiv.appendChild(imageDiv);
         cardDiv.appendChild(textDiv);
         cardDiv.appendChild(commentsAndLikesDiv);
+        commentsAndLikesDiv.appendChild(commentsBorder);
+        commentsAndLikesDiv.appendChild(likesBorder);
         container.appendChild(cardDiv);
       }
     }
@@ -46,42 +46,44 @@ function initialize() {
 
 google.setOnLoadCallback(initialize);
 
-disableScroll();
 
-var keys = [37, 38, 39, 40];
 
-function preventDefault(e) {
-  e = e || window.event;
-  if (e.preventDefault)
-      e.preventDefault();
-  e.returnValue = false;  
-}
+// disableScroll();
 
-function keydown(e) {
-  for (var i = keys.length; i--;) {
-    if (e.keyCode === keys[i]) {
-        preventDefault(e);
-        return;
-        }
-    }
-}
+// var keys = [37, 38, 39, 40];
 
-function wheel(e) {
-  preventDefault(e);
-}
+// function preventDefault(e) {
+//   e = e || window.event;
+//   if (e.preventDefault)
+//       e.preventDefault();
+//   e.returnValue = false;  
+// }
 
-function disableScroll() {
-  if (window.addEventListener) {
-      window.addEventListener('DOMMouseScroll', wheel, false);
-  }
-  window.onmousewheel = document.onmousewheel = wheel;
-}
+// function keydown(e) {
+//   for (var i = keys.length; i--;) {
+//     if (e.keyCode === keys[i]) {
+//         preventDefault(e);
+//         return;
+//         }
+//     }
+// }
 
-function enableScroll() {
-    if (window.removeEventListener) {
-        window.removeEventListener('DOMMouseScroll', wheel, false);
-    }
-    window.onmousewheel = document.onmousewheel = null;  
-}
+// function wheel(e) {
+//   preventDefault(e);
+// }
 
-setInterval(function(){ if(loaded === true){enableScroll(); clearInterval(); }}, 100);
+// function disableScroll() {
+//   if (window.addEventListener) {
+//       window.addEventListener('DOMMouseScroll', wheel, false);
+//   }
+//   window.onmousewheel = document.onmousewheel = wheel;
+// }
+
+// function enableScroll() {
+//     if (window.removeEventListener) {
+//         window.removeEventListener('DOMMouseScroll', wheel, false);
+//     }
+//     window.onmousewheel = document.onmousewheel = null;  
+// }
+
+// setInterval(function(){ if(loaded === true){enableScroll(); clearInterval(); }}, 100);

@@ -64,17 +64,33 @@ var quoteGen = function(){
 
 $(document).ready(function(){quoteGen()})
 
-$(window).scroll(function(){
-  if ($(window).scrollTop() > 320){
-  		console.log(document.getElementById("shareIcon"));
-  		//console.log(document.getElementById("shareIcon").data);
-  		document.getElementById("shareIcon").data = "img/SVGbrand_spocket_logotypewsymbol.svg";
-      	document.getElementById("shareIcon").class = "";
-      	//$("#shareicon").removeClass('shareicon').removeClass('navbarimg').addClass('logo'); 
-      	//document.getElementById("shareIcon").parent().class = "small-3 column left";
-      //(function(){console.log("We're at the bottom of the page!!")}, 500);
-  } else {
-  	document.getElementById("shareIcon").data = "img/SVGic_share_AND.svg";
-  	//document.getElementById("shareIcon").class = "navbarimg svg";
-  }
-});
+// $(function(){
+//     $(window).scroll(function(){
+//         if($(this).scrollTop() > 320) {
+//           document.getElementById("shareIcon").data = "img/SVGbrand_spocket_logotypewsymbol.svg";
+//             // $('#shareIcon')
+//             //     .attr('src','img/SVGbrand_spocket_logotypewsymbol.svg');
+//             //     console.log('fart');
+//                 // .removeClass('.logo .svg');
+//         }
+//         if($(this).scrollTop() < 320) {
+//             $('#shareIcon')   
+//                 .attr('src','img/SVGic_share_AND.svg');
+//         }
+//     });
+// });
+
+// $(window).scroll(function(){
+//   if ($(window).scrollTop() > 320){
+//   		console.log(document.getElementById("shareIcon"));
+//   		//console.log(document.getElementById("shareIcon").data);
+//   		document.getElementById("shareIcon").data = "img/SVGbrand_spocket_logotypewsymbol.svg";
+//       // document.getElementById("shareIcon").class = "";
+//       	//$("#shareicon").removeClass('shareicon').removeClass('navbarimg').addClass('logo'); 
+//       	//document.getElementById("shareIcon").parent().class = "small-3 column left";
+//       //(function(){console.log("We're at the bottom of the page!!")}, 500);
+//   } else {
+//   	document.getElementById("shareIcon").data = "img/SVGic_share_AND.svg";
+//   	//document.getElementById("shareIcon").class = "navbarimg svg";
+//   }
+// });
