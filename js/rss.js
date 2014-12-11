@@ -10,20 +10,23 @@ function initialize() {
       var container = document.getElementById("feed");
       for (var i = 0; i < result.feed.entries.length; i++) {
         var entry = result.feed.entries[i];
-        var cardDiv = document.createElement("cardDiv");
-        var imageDiv = document.createElement("imageDiv");
-        var textDiv = document.createElement("textDiv");
-        var commentsAndLikesDiv = document.createElement("commentsAndLikesDiv");
+        var cardDiv = document.createElement("div");
+        cardDiv.className = "card";
+        var imageDiv = document.createElement("div");
+        imageDiv.className = "image";
+        var textDiv = document.createElement("div");
+        textDiv.className = "text";
+        var commentsAndLikesDiv = document.createElement("div");
+        commentsAndLikesDiv.className = "commentsAndLikes"
         var data = entry.content.slice(entry.content.indexOf("@sprocketblog</a></p>") + 24, entry.content.indexOf("<img src=\"http://websta.me/img/tags_mono.png")).replace('width="306" height="306"', "").replace("_a.", "_n.");
         var rssData = data.split("</p>");
-        imageDiv.innerHTML = rssData[0];
-        textDiv.innerHTML = rssData[1];
+        imageDiv.innerHTML = rssData[0] + rssData[1];
+        // textDiv.innerHTML = rssData[1];
         commentsAndLikesDiv.innerHTML = rssData[2].replace("http://websta.me/img/comments.png", "img/SVGic_comments.svg").replace("http://websta.me/img/likes.png", "img/SVGic_likes.svg");
         cardDiv.appendChild(imageDiv);
         cardDiv.appendChild(textDiv);
         cardDiv.appendChild(commentsAndLikesDiv);
         container.appendChild(cardDiv);
-        cardDiv.id = "card";
       }
     }
   })
