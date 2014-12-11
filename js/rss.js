@@ -20,9 +20,20 @@ function initialize() {
         commentsAndLikesDiv.className = "commentsAndLikes"
         var data = entry.content.slice(entry.content.indexOf("@sprocketblog</a></p>") + 24, entry.content.indexOf("<img src=\"http://websta.me/img/tags_mono.png")).replace('width="306" height="306"', "").replace("_a.", "_n.");
         var rssData = data.split("</p>");
-        imageDiv.innerHTML = rssData[0] + rssData[1];
-        // textDiv.innerHTML = rssData[1];
-        commentsAndLikesDiv.innerHTML = rssData[2].replace("http://websta.me/img/comments.png", "img/SVGic_comments.svg").replace("http://websta.me/img/likes.png", "img/SVGic_likes.svg");
+        imageDiv.innerHTML = rssData[0];
+        var arr = rssData[1].slice(rssData[1].indexOf("#"));
+        arr = arr.slice(0, arr.length - 9);
+        rssData[1] = rssData[1].replace(arr, '');
+        textDiv.innerHTML = rssData[1] + "<br><br>" + arr;
+        var x = rssData[2].replace("http://websta.me/img/comments.png", "img/SVGic_comments.svg").replace("http://websta.me/img/likes.png", "img/SVGic_likes.svg").replace("red", "").replace('alt="COMMENTS:">', 'alt="COMMENTS:"> ');
+        var commentsBorder = document.createElement("div");
+        commentsBorder.className = "iconBorderLeft";
+        commentsBorder.innerHTML = x.slice(x.indexOf("<img"), x.indexOf("</span>"));
+        var likesBorder = document.createElement("div");
+        likesBorder.className = "iconBorderRight";
+        likesBorder.innerHTML = x.slice(x.indexOf('<img src="img/SVGic_comments.svg"'));
+        commentsAndLikesDiv.appendChild(commentsBorder);
+        commentsAndLikesDiv.appendChild(likesBorder);
         cardDiv.appendChild(imageDiv);
         cardDiv.appendChild(textDiv);
         cardDiv.appendChild(commentsAndLikesDiv);

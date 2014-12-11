@@ -22,24 +22,73 @@ body {
 
 #feed {
 	margin: 0%;
+	margin-left: auto;
+	margin-right: auto;
 	text-align: center;
-	width: 100%
+	max-width: 640px;
 }
 
 .card {
 	background-color: white;
-	color: red;
-	/*margin: 0;*/
-	/*padding: 0;*/
 }
 
-/*p {
-	width: inherit;
+p strong {
+	font-style: normal;
+	color: gray;
+	font-weight: 200;
+	font-size: 1em;
+	margin: 0.5em;
 }
 
-.card div {
-	width: inherit;
-}*/
+p {
+	font-style: normal;
+	color: silver;
+	font-weight: 200;
+	font-size: 1em;
+}
+
+.commentsAndLikes p {
+	color: black;
+}
+
+.commentsAndLikes {
+	text-align: center;
+	position: center;
+	max-width: 100px;
+}
+
+.iconBorder {
+	margin: 0 auto;
+	border: solid;
+	border-width: .1em;
+	max-width: 50px;
+	border-radius: 5px;
+	color: silver;
+	float: auto;
+	text-align: center;
+}
+
+.iconBorderLeft {
+	margin: 0 auto;
+	border: solid;
+	border-width: .1em;
+	max-width: 50px;
+	border-radius: 5px;
+	color: silver;
+	float: left;
+	text-align: center;
+}
+
+.iconBorderRight {
+	margin: 0 auto;
+	border: solid;
+	border-width: .1em;
+	max-width: 50px;
+	border-radius: 5px;
+	color: silver;
+	float: right;	
+	text-align: center;
+}
 
 .top-bar {
 	color: white;
@@ -72,11 +121,6 @@ object {
 	text-align: right;
 	display: block;
 }
-
-/*.photo {
-	width: 100%;
-	height: 100%;
-}*/
 
 .shareIcon {
 	width: 3em;
