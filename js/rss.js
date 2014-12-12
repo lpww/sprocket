@@ -39,6 +39,8 @@ function initialize() {
         commentsAndLikesDiv.appendChild(likesBorder);
         container.appendChild(cardDiv);
       }
+      container.appendChild(document.getElementById('footerContainer'));
+      $('#footerContainer').removeClass('invisible');
     }
   })
  loaded = true;

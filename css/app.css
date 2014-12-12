@@ -1,17 +1,12 @@
 body {
 	background-color: #DBDAD8;
 	font-family: Helvetica, Arial, sans-serif;
-	/*background: transparent url("img/SVGbrand_spocket_logotypewsymbol.svg") fixed no-repeat 30px 30px;*/
 }
 
 #header {
 	color: white;
 	background-color: #0A8F08;
 	padding-top: .5em;
-/*	background: orange url("img/SVGic_share_AND.svg") fixed no-repeat 30px 30px;
-	overflow: hidden;
-	padding: 30px 0 30px 30px;
-	height: 138px;*/
 }
 
 #quote {
@@ -141,4 +136,85 @@ a:hover {
 
 .stretch {
 	letter-spacing: .03em;
+}
+
+.footerContainer {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	box-shadow: 0.1em 0.1em 0.8em #888888;
+	background-color: #0A8F08;
+	text-align: left;
+}
+
+.upperFooter {
+	background-color: #0A8F08;
+}
+
+.lowerFooter {
+	background-color: #F8F2DC;
+}
+
+.upperFooter p {
+ 	color: white;
+ 	margin-top: 1em;
+ 	margin-bottom: 3em;
+ 	font-size: 1em;
+ 	font-weight: 200;
+}
+
+.upperFooter h4 {
+	color: white;
+	margin: 0;
+	font-weight: 300;
+}
+
+.lowerFooter h4 {
+	color: #313131;
+	margin: 0;
+	font-weight: 300;
+}
+
+.lowerFooter p {
+	color: #313131;
+	margin-top: 1em;
+	margin-bottom: 2em;
+	font-size: 1em;
+	font-weight: 200;
+}
+
+.footerFloatLeft {
+	position: relative;
+	display: inline-block;
+	width: 66%;
+	margin-left: 1.5em;
+	margin-top: 2em;
+}
+
+.footerFloatRight {
+	position: relative;
+	display: inline-block;
+	width: 25%;
+}
+
+.footerLogo {
+	height: 8em;
+	width: 8em;
+}
+
+.lowestFooter {
+	text-align: left;
+	margin-left: 1.5em;
+	margin-top: 2em;
+}
+
+.lowestFooter p {
+	padding-bottom: 2em;
+}
+
+hr {
+	margin-left: 2%;
+	margin-bottom: 0em;
+	margin-top: 0em;
+	width: 96%;
+	border-color: #313131;
 }
