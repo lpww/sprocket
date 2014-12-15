@@ -93,9 +93,10 @@ p {
 }
 
 .logo {
-	width: 15em;
-	height: 8em;
+	width: 12em;
+	height: 6em;
 	text-align: left;
+	margin-top: .2em;
 }
 
 object {
@@ -132,6 +133,7 @@ a:hover {
 	width: 3em;
 	text-align: right;
 	margin: .3em;
+	font-weight: 200;
 }
 
 .stretch {
@@ -217,4 +219,11 @@ hr {
 	margin-top: 0em;
 	width: 96%;
 	border-color: #313131;
+}
+
+small {
+	font-weight: 200;
+	size: .1em;
+	color: #313131;
+	text-align: right;
 }
