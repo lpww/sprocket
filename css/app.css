@@ -24,14 +24,21 @@ body {
 	margin: 0%;
 	margin-left: auto;
 	margin-right: auto;
-	text-align: center;
+	text-align: left;
 	max-width: 640px;
 }
 
 .card {
 	background-color: white;
 	margin-top: 1em;
-	box-shadow: 0.1em 0.1em 0.8em #888888;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.5);
+	-moz-box-shadow: 0 1px 1px rgba(0,0,0,.5);
+	box-shadow: 0 1px 1px rgba(0,0,0,.5);
+	border: solid 1px #d8d8d8;
 }
 
 p strong {
@@ -39,7 +46,6 @@ p strong {
 	color: gray;
 	font-weight: 200;
 	font-size: 1em;
-	margin: 0.5em;
 }
 
 p {
@@ -49,24 +55,32 @@ p {
 	font-size: 1em;
 }
 
+.text p {
+	margin: 1em;
+}
+
 .commentsAndLikes p {
 	color: black;
 }
 
 .commentsAndLikes {
 	background-color: white;
+	margin: 1em;
+	margin-bottom: 0;
 }
 
 .iconBorder {
-	border: solid;
-	border-width: .1em;
-	border-radius: 5px;
+	border: solid 1px #bfbfbf;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
 	color: silver;
 	position: relative;
 	display: inline-block;
-	margin-left: 3px;
-	margin-right: 3px;
+	margin-left: 0.1em;
+    margin-right: 0.75em;
 	margin-bottom: 1.3em;
+	background-color: rgba(5,111,0,0);
 }
 
 .iconBorder img{
@@ -77,6 +91,7 @@ p {
 .iconBorder span{
 	margin: 0.2em;
 	margin-left: 0;
+	color: grey;
 }
 
 .top-bar {
@@ -93,10 +108,18 @@ p {
 }
 
 .logo {
-	width: 12em;
-	height: 6em;
-	text-align: left;
-	margin-top: .2em;
+	width: 15em;
+	height: 7em;
+	margin-top: -2.35em;
+	margin-left: -4em;
+}
+
+.stickyLogo {
+	width: 15em;
+	height: 7em;
+	margin-top: -2.35em;
+	margin-bottom: -3.35em;
+	margin-left: -4em;
 }
 
 object {
@@ -143,7 +166,14 @@ a:hover {
 .footerContainer {
 	margin-top: 1em;
 	margin-bottom: 1em;
-	box-shadow: 0.1em 0.1em 0.8em #888888;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.5);
+	-moz-box-shadow: 0 1px 1px rgba(0,0,0,.5);
+	box-shadow: 0 1px 1px rgba(0,0,0,.5);
+	border: solid 1px #d8d8d8;
 	background-color: #0A8F08;
 	text-align: left;
 }
@@ -198,9 +228,20 @@ a:hover {
 	width: 25%;
 }
 
-.footerLogo {
-	height: 8em;
-	width: 8em;
+.footerLogo1 {
+	height: 7em;
+	width: 7em;
+	float: right;
+	margin-right: 0.8em;
+	margin-bottom: 1.5em;
+}
+
+.footerLogo2 {
+	height: 9em;
+	width: 9em;
+	float:right;
+	margin-right: -0.43em;
+	margin-bottom: 1.5em;
 }
 
 .lowestFooter {
