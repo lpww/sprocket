@@ -38,7 +38,7 @@ function initialize() {
         var likesBorder = document.createElement("div");
         likesBorder.className = "iconBorder";
         likesBorder.innerHTML = "<span>" + x.slice(x.indexOf('<img src="img/SVGic_comments.svg"')) + "</span>";
-        
+         
         cardDiv.appendChild(imageDiv);
         cardDiv.appendChild(textDiv);
         cardDiv.appendChild(commentsAndLikesDiv);
