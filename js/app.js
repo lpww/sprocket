@@ -1,3 +1,4 @@
+//Array contains quotes and authors
 var quotes = [
   ["Life is like riding a bicycle: you don't fall off unless you stop pedaling", "Claude Pepper"],
   ["Life is like riding a bicycle. To keep your balance you must keep moving.", "Albert Einstein"],
@@ -45,52 +46,31 @@ var quotes = [
   ["I ride my bicycle to ride my bicycle", "Unknown"]
 ];
 
+//Use this quote last
 var lastQuoteStanding = ["Damn, bicycling is awesome.", "Everyone"];
 
+//Create copy of quotes array
 var quotesCopy = quotes.slice();
 
+//Function to generate the next quote
 var quoteGen = function(){
+  //Reload array once all quotes have been used
 	if(quotesCopy.length == 0){
 		quotesCopy = quotes.slice();
+
+    //Update page ith new quote and author
 		$(".epicQuote").text('"' + lastQuoteStanding[0] + '"');
 		$(".epicAuthor").text('- ' + lastQuoteStanding[1]);
 	} else {
-	var result = quotesCopy[Math.floor(Math.random()*quotesCopy.length)];
-	var removeQuote = quotesCopy.splice(result, 1);
-	$(".epicQuote").text('"' + result[0] + '"');
-	$(".epicAuthor").text('- ' + result[1]);
+    //Use random quote, then delete it from the copied array to prevent repeats
+	  var result = quotesCopy[Math.floor(Math.random()*quotesCopy.length)];
+	  var removeQuote = quotesCopy.splice(result, 1);
+
+    //Update page with new quote and author
+	  $(".epicQuote").text('"' + result[0] + '"');
+	  $(".epicAuthor").text('- ' + result[1]);
 	}
 }
 
+//Run quote generator function on page load
 $(document).ready(function(){quoteGen()})
-
-// $(function(){
-//     $(window).scroll(function(){
-//         if($(this).scrollTop() > 320) {
-//           document.getElementById("shareIcon").data = "img/SVGbrand_spocket_logotypewsymbol.svg";
-//             // $('#shareIcon')
-//             //     .attr('src','img/SVGbrand_spocket_logotypewsymbol.svg');
-//             //     console.log('fart');
-//                 // .removeClass('.logo .svg');
-//         }
-//         if($(this).scrollTop() < 320) {
-//             $('#shareIcon')   
-//                 .attr('src','img/SVGic_share_AND.svg');
-//         }
-//     });
-// });
-
-// $(window).scroll(function(){
-//   if ($(window).scrollTop() > 320){
-//   		console.log(document.getElementById("shareIcon"));
-//   		//console.log(document.getElementById("shareIcon").data);
-//   		document.getElementById("shareIcon").data = "img/SVGbrand_spocket_logotypewsymbol.svg";
-//       // document.getElementById("shareIcon").class = "";
-//       	//$("#shareicon").removeClass('shareicon').removeClass('navbarimg').addClass('logo'); 
-//       	//document.getElementById("shareIcon").parent().class = "small-3 column left";
-//       //(function(){console.log("We're at the bottom of the page!!")}, 500);
-//   } else {
-//   	document.getElementById("shareIcon").data = "img/SVGic_share_AND.svg";
-//   	//document.getElementById("shareIcon").class = "navbarimg svg";
-//   }
-// });
